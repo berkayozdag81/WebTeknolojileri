@@ -1,0 +1,102 @@
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    background:white;
+    
+}
+p{
+    font-size:17px;
+}
+.hobi-aciklama{
+    font-weight: bolder;
+}
+.hobi-bilgi{
+    font-weight: normal;
+}
+.section-baslik > h5{
+    font-weight: bolder;
+} 
+header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+/*////////////////////////////////////////////NAVİGASYON TUŞLARI//////////////////////////*/
+nav {
+    /*Taşma durumunda nasıl davranması gerektiğini overflow belirliyoruz.*/
+    overflow: hidden;
+    background-color: #333;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*navigasyon içerisindeki a etiketine özellik ekliyoruz.*/
+nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*navigasyona hover özeliği eklemek için*/
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*////////////////////////////////////////DİV ÖZELLİKLERİ/////////////////////////////////*/
+/*Satırdan öncekileri kaldırmak için*/
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Ayrı bir blok oluşturarak elemanları gruplayabilmek için için*/
+.blok {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+/*////////////////////////////////////////RESİM//////////////////////////////////////////////*/
+.resim {
+    width: 100px;
+    height: 100px;
+}
+.sakaryaFoto{
+    width: 515px;
+    height: 250px;
+    
+}
+
+/*///////////////////////////////////////TABLE////////////////////////////////////////////////*/
+table {
+    font-family: 'Lato', sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    font-size:15px;
+    width: 600px;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: #333;
+    color: white;
+}
+
+
