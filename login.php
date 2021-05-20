@@ -3,7 +3,7 @@
     $sifre = $_POST['sifre'];
 
     if($eposta == "b191210051@sakarya.edu.tr" && $sifre == "1903"){
-        echo "Hoşgeldin ". $eposta;
+        header("Location:./index.html");
     }else{
         header("Location:./Login.html?eposta=$eposta");
     }
