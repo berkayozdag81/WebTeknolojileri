@@ -89,6 +89,22 @@
         </div>
     </section>
     <br><br>
+        <!--Sevdigim Filmler(API)-->
+        <div class="film-row">
+            <h4 style="text-align: center;">Sevdiğim Filmler</h4>
+            <div class="film-column">
+              <div class="film-card"><img src="" class="img-thumbnail" alt=""></div>
+            </div>
+            <div class="film-column">
+              <div class="film-card"><img src="" class="img-thumbnail" alt=""></div>
+            </div>
+            <div class="film-column">
+              <div class="film-card"><img src="" class="img-thumbnail" alt=""></div>
+            </div>
+            <div class="film-column">
+              <div class="film-card"><img src="" class="img-thumbnail" alt=""></div>
+            </div>
+        </div>
 
 
     <!--Yetkinlik Section-->
@@ -180,7 +196,7 @@
     </section>
     <footer>
         <div class="text-center py-3">
-            © 2020 Tüm Hakları Saklıdır: Berkay Özdağ
+            © 2021 Tüm Hakları Saklıdır: Berkay Özdağ
         </div>
     </footer>
 
@@ -195,6 +211,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script>
+            function getData(){
+                fetch("https://api.themoviedb.org/3/movie/popular?api_key=4af87c39d6a928627f9d421539a3e671&language=en-US&page=1")
+                .then(response => {
+                    return response.json();
+                }).then((res) => {
+                    console.log(res);
+                    var afisler = document.querySelectorAll(".film-card");
+                    for(var i = 0; i < afisler.length; i++){
+                        afisler[i].getElementsByClassName("img-thumbnail")[0].src=`https://www.themoviedb.org/t/p/w1280${res.results[i].poster_path}`;
+                    }
+                }
+                );
+            }
+            getData();
+        </script>
 </body>
-
 </html>

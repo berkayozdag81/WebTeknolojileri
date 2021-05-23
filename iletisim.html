@@ -30,7 +30,6 @@
                 <form name="iletisim-form" id="iletisim" method="post" action="iletisimBilgileri.php"
                     onsubmit="return dogrula();" role="form">
                     <div class="controls">
-
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -120,9 +119,25 @@
 
     <footer>
         <div class="text-center py-3">
-            © 2020 Tüm Hakları Saklıdır: Berkay Özdağ
+            © 2021 Tüm Hakları Saklıdır: Berkay Özdağ
         </div>
     </footer>
+
+    <script>
+        const myForm = document.getElementById("iletisim");
+
+        myForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const request = new XMLHttpRequest();
+
+            request.open("post","iletisimBilgileri.php");
+
+            request.onload = function (){
+                console.log(request.responseText);
+            }
+            request.send(new FormData(myForm));
+        });
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
